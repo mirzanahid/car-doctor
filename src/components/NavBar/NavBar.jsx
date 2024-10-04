@@ -1,17 +1,28 @@
-import { NavLink }  from "react-router-dom";
+import { Link, NavLink }  from "react-router-dom";
 import logo from "../../assets/logoo.svg"
+import Button from "../Button/Button";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { IoSearchOutline } from "react-icons/io5";
 
 const NavBar = () => {
 
     const navItems = <>
-    <NavLink>Home</NavLink>
-    <NavLink>About</NavLink>
-    <NavLink>Services</NavLink>
-    <NavLink>Blog</NavLink>
+    <NavLink to={'/'} className={({isActive})=>{
+      isActive ? "active" : ""
+    }}>Home</NavLink>
+    <NavLink to={'/about'} className={({isActive})=>{
+      isActive ? "active" : ""
+    }}>About</NavLink>
+    <NavLink to={'/services'} className={({isActive})=>{
+      isActive ? "active" : ""
+    }}>Services</NavLink>
+    <NavLink to={'/blog'} className={({isActive})=>{
+      isActive ? "active" : ""
+    }}>Blog</NavLink>
 </>
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 my-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,20 +43,22 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow 'font-inter text-sub4 text-dark2'"
           >
            {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl"><img src={logo} alt="" /></a>
+        <Link to={'/'} className=" text-xl"><img src={logo} alt="" /></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 font-inter text-sub4 text-dark2 gap-45">
         {navItems}
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-20">
+        <HiOutlineShoppingBag className="text-2xl" />
+        <IoSearchOutline className="text-2xl" />
+        <Button className={'font-inter text-sub4 text-primary border border-primary rounded-sm py-15 px-30 hover:bg-primary hover:text-white duration-300'} label={'Appointment'}></Button>
       </div>
     </div>
   );

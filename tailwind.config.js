@@ -20,7 +20,9 @@ export default {
         sub4: ['18px', { lineHeight: '18px', fontWeight: '600' }], // Subheading 4
 
         // Paragraph styles
-        p1: ['16px', { lineHeight: '26px', fontWeight: '400' }],  // Paragraph 1
+        p1: ['16px', { lineHeight: '30px', fontWeight: '400' }],  // Paragraph 1
+        p2: ['18px', { lineHeight: '30px', fontWeight: '400' }],  // Paragraph 2
+        p3: ['16px', { lineHeight: '30px', fontWeight: '500' }],  // Paragraph 2
    
       },
       colors: {
@@ -33,14 +35,20 @@ export default {
         dark6: '#E8E8E8',
         dark7: '#F3F3F3',
         white: '#FFFFFF',
+        yellow : "#FF912C"
       },
       spacing: {
         130: '130px',   
+        100: '100px',   
+        75: '75px',   
         50: '50px',   
+        45: '45px',   
         40: '40px',   
         30: '30px',   
+        24: '24px',   
         20: '20px',
         15: '15px',
+        10: '10px',
 
       },
       borderRadius: {
@@ -54,6 +62,10 @@ export default {
           lg: '1140px',   // Custom container width at large screen sizes
         },
       },
+    },
+    backgroundImage: {
+      'dark-gradient': 'linear-gradient(90deg, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 100%);', // Example custom gradient
+     
     },
   },
   screens: {
