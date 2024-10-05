@@ -26,7 +26,7 @@ const Banner = () => {
           clickable: true,
         }}
         loop={true}
-        infinity={true}
+      
         navigation={true}
         modules={[Autoplay, Navigation]}
         className="mySwiper h-[600px] w-full rounded-md"

@@ -17,3 +17,10 @@ a.active::after{
     bottom: 0;
     content: '';
 } */
+
+
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: 400;      
+  }

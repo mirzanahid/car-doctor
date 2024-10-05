@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { MdOutlineArrowForward } from "react-icons/md";
 
-const ServiceCard = ({ services }) => {
-  const { title, img, price } = services;
+const ServiceCard = ({ service }) => {
+  const { title, img, price } = service;
   return (
     <div className="p-24 border border-dark6 rounded-md w-[364px]">
       <img className="w-full h-[208px] rounded-md" src={img} alt="" />

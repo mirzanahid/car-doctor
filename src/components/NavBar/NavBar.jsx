@@ -58,7 +58,8 @@ const NavBar = () => {
       <div className="navbar-end gap-20">
         <HiOutlineShoppingBag className="text-2xl" />
         <IoSearchOutline className="text-2xl" />
-        <Button className={'font-inter text-sub4 text-primary border border-primary rounded-sm py-15 px-30 hover:bg-primary hover:text-white duration-300'} label={'Appointment'}></Button>
+        <Link to={'/login'}><Button className={'font-inter text-sub4 text-primary border border-primary rounded-sm py-15 px-30 hover:bg-primary hover:text-white duration-300'} label={'Login'}></Button></Link>
+        <Link to={'/signup'}><Button className={'font-inter text-sub4 text-primary border border-primary rounded-sm py-15 px-30 hover:bg-primary hover:text-white duration-300'} label={'Sign Up'}></Button></Link>
       </div>
     </div>
   );
